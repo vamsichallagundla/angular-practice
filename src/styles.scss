@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+@import "styles/grid/grid-styles.scss";
+@import "styles/nav/nav-styles.scss";
+@import "styles/header/header-styles.scss";
+@import "styles/utils/utils-styles.scss";
+
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1px 30px;
+}
+
+.main-body {
+  margin: 0 20px;
+  background-color: rgb(248, 248, 248);
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+

@@ -1,0 +1,158 @@
+$dark-green: #28b485;
+nav {
+    background-color: #563d7c;
+    margin-bottom: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: rgba(228, 228, 228, 0.753);
+  }
+  
+  .navigation {
+    list-style: none;
+     float: left;
+  
+    li {
+      display: inline-block;
+      margin: 20px;
+      cursor: pointer;
+      text-transform: uppercase;
+      padding-right: 20px;
+      border-right: 2px solid $dark-green;
+  
+  
+      &:first-child {
+        margin: 0;
+      }
+      &:last-child {
+      padding-right: 5px;
+      border-right: 0px;
+      }
+    }
+    li:hover {
+      transform: translateY(-5px);
+    }
+    li:active {
+      outline:none;
+    }
+  
+    // .app-logo {
+    //   text-decoration: solid;
+    //   background-color: whitesmoke;
+    //   width: 10px;
+    //   height: 30px;
+    //   text-align: center;
+    // }
+  
+  }
+  
+  .nav-buttons {
+    float: right;
+  
+    li {
+      display: inline-block;
+      margin: 20px;
+      cursor: pointer;
+      // text-transform: uppercase;
+      padding-right: 20px;
+      border-right: 2px solid $dark-green;
+  
+  
+      &:first-child {
+        margin: 0;
+      }
+      &:last-child {
+      padding-right: 5px;
+      border-right: 0px;
+      }
+    }
+    // li:hover {
+    //   transform: translateY(-5px);
+    // }
+    li:active {
+      outline:none;
+    }
+  
+  
+    .btn-white {
+      padding-top: 2px;
+      padding-bottom: 2px
+    }
+  }
+  
+  // .nav-buttons li:last-child {
+  //   margin: 0px;
+  // }
+  
+  .row {
+    // display: inline-block;
+  //  position: relative;
+  
+    .left-row {
+      height: 40px;
+      width: 40%;
+      // position: absolute;
+    }
+    .right-row {
+      height: 40px;
+      width: 40%;
+      //position: absolute;
+    }
+  }
+  .vl {
+    border-left: 2px solid $dark-green;
+    height: 200px;
+  }
+  
+  .active-router1 {
+    color: whitesmoke;
+    font-weight: bold;
+    border: none;
+    outline: none;
+  }
+
+  .header-teritory {
+    background-image: linear-gradient(to right, #563d7c, $dark-green);
+    display: inline;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .center-header {
+    text-align: center;
+  }
+
+  .composition {
+    position: relative;
+
+    &__photo {
+      width: 55%;
+      border-radius: 2px;
+      position: absolute;
+      box-shadow: 0 15px 40px rgba(black, .4);
+      z-index: 10;
+      transition: all .2s;
+      outline-offset: 10px;
+
+      &--p1 {
+        top: -20px;
+        left: 0px
+      }
+      &--p2 {
+        top: 20px;
+        right: 0;
+      }
+      &--p3 {
+        top: 45px;
+        left: 20%;
+      }
+      &:hover {
+        transform: scale(1.25);
+        outline: 10px solid green;
+        box-shadow: 0 25px 40px rgba(rgb(233, 231, 231), .4);
+        z-index: 20;
+      }
+    }
+    
+    
+
+  }

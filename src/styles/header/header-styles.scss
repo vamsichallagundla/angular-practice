@@ -1,0 +1,111 @@
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to bottom, rgba(126, 213, 111, 0.9), rgba(40, 180, 131, 0.9)), url(../../assets/image1.png);
+    background-size: cover; //this will make sure it covers the 95vh
+    background-position: top; //while responsive this will keep top image part as is
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+    position: relative;
+  }
+  
+  .mani-content {
+    left: 50%;
+    top: 40%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+  }
+  
+  .primary-content {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    line-height: 40px;
+    backface-visibility: hidden;
+    margin: 20px;
+  }
+  
+  .header-main {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    animation-name: moveInLeft;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+  
+    // &:hover {
+    //   background-image: linear-gradient(to right, rgb(0, 0, 0), white);
+    // display: inline-block;
+    // -webkit-background-clip: text;
+    // color: transparent;
+    // }
+  }
+  
+  .header-secondary {
+    display: block;
+    font-size: 23px;
+    animation: moveInRight 3s ease-out;
+    //duration timing-function delay iteration-count direction fill-mode;
+  }
+  
+  @keyframes moveInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+  
+    80% {
+      opacity: 1;
+      transform: translateX(20px)
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+  
+  @keyframes moveInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+  
+    80% {
+      opacity: 1;
+      transform: translateX(-20px)
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+  
+  .btn,
+  .btn:visited,
+  .btn:link {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px;
+    display: inline-block;
+    border: none; // to remove black default border
+    outline: none; // to remove black default border after click
+    border-radius: 20px;
+    translate: all .3s; // check on this.
+  }
+  
+  .btn:hover {
+    transform: translateY(-3px); // this will move the button up on hover
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .5); // this will bring the shadow under the button when we hover on button
+    background-color: darken($color: #000000, $amount: 15%); // this will apply different background color to button on hover state
+  }
+  
+  .btn:active {
+    transform: translateY(-1px); // this will move the button up on active
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .8); // this will bring the shadow under the button when we active on button
+  }
+  
+  .btn-white {
+    background-color: whitesmoke;
+    color: grey;
+  }

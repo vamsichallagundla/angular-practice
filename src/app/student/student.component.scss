@@ -1,0 +1,44 @@
+.section-features {
+    background-image: linear-gradient(to bottom, rgb(3, 97, 3), rgb(179, 179, 85));
+    padding: 100px;
+    background-size: cover;
+    transform: skewY(-7deg);
+    margin-top: 150px;
+
+    & > * {
+        transform: skewY(7deg);
+    }
+}
+
+.features {
+    
+    border-radius: 3px;
+
+    &__box {
+        background-color: white;
+        padding: 25px;
+        text-align: center;
+        transition: all .2s;
+        box-shadow: 30px 10px 30px black;
+        &:hover {
+            transform: translateY(-40px) scale(1.03);
+        }
+
+    }
+    &__icon {
+        margin: 25px 0;
+        display: inline-block;
+        background-image: linear-gradient(to right, green, red);
+        -webkit-background-clip: text;
+        color: transparent;
+        
+    }
+
+    &__header {
+        margin: 20px 0;
+    }
+
+    &__text {
+
+    }
+}

@@ -1,0 +1,43 @@
+<section>
+    <div class="row">
+        <div class="col-1-of-2">
+            <form [formGroup]="dataForm">
+                <input type="text" name="techName" id="techName" formControlName="techName">
+                <!-- <div
+                    *ngIf="!dataForm.controls.techName.valid && dataForm.controls.techName.errors.required && searchClicked">
+                    <p>This Field is required</p>
+                </div> -->
+                <button *ngIf="!editMode" type="submit" (click)="addDataToList()">Add</button>
+                <button type="submit" *ngIf="editMode" (click)="saveRecord()">Save</button>
+            </form>
+        </div>
+        <div class="col-1-of-2">
+            <select [(ngModel)]="selectedValue">
+                <option value="ALL">ALL</option>
+                <!-- <option value="PROCESSED">Processed</option>
+                <option value="UNPROCESSED">unprocessed</option> -->
+                <option *ngFor="let item of dropDownList" [value]="item">{{item}}</option>
+            </select>
+        </div>
+    </div>
+</section>
+
+<div class="row">
+    <div *ngIf="editMode">
+        <p>Updating in progress......</p>
+    </div>
+    <table *ngIf="dataList.length && !editMode">
+        <tr *ngFor="let list of dataList; let i=index">
+            <td *ngIf="list.status === selectedValue || selectedValue === 'ALL'"
+                [ngClass]="list.status === 'PROCESSED' ? 'myClassProp' : ''">{{list.value}}</td>
+            <td *ngIf="list.status === selectedValue || selectedValue === 'ALL'">
+                <button type="submit" (click)="deleteRecord(list.id)">Delete</button>
+                <button type="submit" *ngIf="list.status === 'PROCESSED'" (click)="processRecord(list.id)">Un
+                    Process</button>
+                <button type="submit" *ngIf="list.status === 'UNPROCESSED' || list.status === 'ADDED'"
+                    (click)="UnProcessRecord(list.id)">Process</button>
+                <button type="submit" (click)="updateValues(list.id)">Update</button>
+            </td>
+        </tr>
+    </table>
+</div>

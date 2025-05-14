@@ -1,0 +1,38 @@
+.section-about {
+    padding: 150px 0;
+    background-image: linear-gradient(to right, green, yellow);
+    background-size: cover;
+    
+    
+
+    // padding-left: 130px;
+    
+}
+
+.about {
+    background-color: whitesmoke;
+    padding: 70px;
+    margin: 0px;
+    width: 85%;
+    border-radius: 3px;
+    box-shadow: 0 10px 20px black;
+    transform: skewX(-12deg);
+
+    &__shape {
+        // background-color: orangered;
+        height: 130px;
+        width: 130px;
+        float: left;
+        shape-outside: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        transform: translateX(-40px) skewX(12deg);
+        
+    }
+    &__content {
+        transform: skewX(12deg);
+    }
+
+    &__image {
+        padding-right: 100px;
+    }
+}
